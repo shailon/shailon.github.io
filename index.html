@@ -1,0 +1,227 @@
+<meta name="referrer" content="never" />
+
+<iframe width="853" height="480" src="//ok.ru/videoembed/5085079538292" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+
+
+
+
+
+<!-- DRAGABLE 3 -->
+<!-- Draggable DIV -->
+<div id="mydiv5">
+  <div id="mydivheader5"> Click Aqui para mover </div>
+  <script>
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv5"));
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+<style>
+#mydiv5 {
+  padding: 0px;
+		margin: 0px;
+		position: fixed;
+		right: 0px;
+		bottom:0px;
+		width: 300px;
+    height: 400px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#mydivheader5 {
+  border-radius: 15px;
+ padding: 10px;
+  cursor: move;
+  
+  background-color: #2196F3;
+  color: #fff;
+  
+}
+</style>
+ <!-- BUSCADOR 3 -->
+  <!-- Trigger/Open The Modal -->
+	<button id="myBtn5" class="button button5">stream hdriplatino</button>
+<!-- The Modal -->
+		<div id="myModal5" class="modal5">
+<!-- Modal content -->
+		<div class="modal5-content">
+		<div class="modal5-header">
+			<span class="close5">X</span>
+	</div>
+  <div class="modal5-body">
+	<script>
+  // Get the modal
+var modal5 = document.getElementById('myModal5');
+// Get the modal
+var modal5 = document.getElementById('myModal5');
+// Get the button that opens the modal
+var btn5 = document.getElementById("myBtn5");
+// Get the <span> element that closes the modal
+var span5 = document.getElementsByClassName("close5")[0];
+// When the user clicks on the button, open the modal
+btn5.onclick = function() {
+    modal5.style.display = "block";
+	modal5.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span5.onclick = function() {
+    modal5.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal5) {
+        modal5.style.display = "none";
+    }
+}
+</script>
+<body>
+ <style>
+      #twitch-embed {
+        
+        margin-right: 20px;
+        top:300px;
+       border: 0px solid #888;
+        width: 280px;
+        height: 380px;
+        
+      }
+    </style>
+
+    <div id="twitch-embed">
+<!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+ <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+   <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+      
+        width: 280,
+        height: 380,
+        channel: "hdriplatino",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["jsfiddle.net", "nomovies.ddns.net"]
+      });
+</script>	
+    </div>
+    </body>
+<!-- trovo 3 -->
+<body>
+<div>
+</div>
+</body>
+</div>
+</div>
+</div>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+t /* The Modal (background) */
+.modal5 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1px; /* Sit on top */
+    left: 0px;
+    top: 300px;
+     margin: 0px; /* 15% from the top and centered */
+    border: 0px solid #888;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+/* Modal Content/Box contenido de tiwtch  */
+.modal5-content {
+	position: fixed;
+    background-color: #fefefe;
+    margin: 0px; /* 15% from the top and centered */
+    padding: 0;
+   border: 0px solid #888;
+	border-radius: 15px;
+    width: 300px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatebottom;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close5 {
+    color: #666;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close5:hover, .close5:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal5-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal5-body {padding: 2px 16px;}
+.button5 {
+top: 300px;
+width: 200px;
+
+margin: 10px; /* 15% from the top and centered */
+ }
+</style>
+  </div>
+<!-- BUSCADOR 3 -->
+<!-- DRAGABLE 3 -->
