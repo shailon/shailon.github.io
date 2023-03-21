@@ -24,12 +24,12 @@ body {
 	grid-gap: 5px;
 }
 
-.item img{
+.item iframe{
 	border-radius: 5px;
 	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
 }
 
-.item-img {
+.item-video {
 	max-width: 100%;
 	display: block;
 	cursor: pointer;
