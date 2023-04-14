@@ -4,11 +4,11 @@ header("Content-Type: text/plain");
 $filename_adstxt_user = 'ads.txt';
 
 $ads_txt = @file_get_contents($filename_adstxt_user);
-$ads_txt_themoneytizer = file_get_contents('https://www.themoneytizer.com/ads.txt?id=102485');
+$ads_txt_themoneytizer = file_get_contents('https://www.themoneytizer.com/ads.txt?id=102546');
 if(empty($ads_txt_themoneytizer)){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_URL, 'https://www.themoneytizer.com/ads.txt?id=102485');
+    curl_setopt($ch, CURLOPT_URL, 'https://www.themoneytizer.com/ads.txt?id=102546');
     $ads_txt_themoneytizer = curl_exec($ch);
     curl_close($ch);
 }
