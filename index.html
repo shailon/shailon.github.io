@@ -227,7 +227,286 @@
     
     <div class="container">
 			
+       
+       
       
+<!-- DRAGABLE 3 -->
+<!-- Draggable DIV -->
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<div id="mydiv14" class="js_zoom_and_pan">
+  <div id="mydivheader14"> Click Aqui para mover </div>
+ <script>
+  
+  
+  
+  (function() {
+  function touchHandler(e) {
+    var touches = e.changedTouches;
+    var first = touches[0];
+    var type = "";
+
+    switch(e.type) {
+      case "touchstart":
+        type = "mousedown";
+        break;
+      case "touchmove":
+        type="mousemove";
+        break;
+      case "touchend":
+        type="mouseup";
+        break;
+      default:
+        return;
+    }
+
+    var simulatedEvent = document.createEvent("MouseEvent");
+    simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
+
+    first.target.dispatchEvent(simulatedEvent);
+    e.preventDefault();
+  }
+
+  function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+  }
+
+  init();
+})();
+
+
+(function($) {
+    $.fn.drags = function(opt) {
+
+        opt = $.extend({handle:"",cursor:"move"}, opt);
+
+        if(opt.handle === "") {
+            var $el = this;
+        } else {
+            var $el = this.find(opt.handle);
+        }
+
+        return $el.css('cursor', opt.cursor).on("mousedown", function(e) {
+            if(opt.handle === "") {
+                var $drag = $(this).addClass('draggable');
+            } else {
+                var $drag = $(this).addClass('active-handle').parent().addClass('draggable');
+            }
+            var z_idx = $drag.css('z-index'),
+                drg_h = $drag.outerHeight(),
+                drg_w = $drag.outerWidth(),
+                pos_y = $drag.offset().top + drg_h - e.pageY,
+                pos_x = $drag.offset().left + drg_w - e.pageX;
+            $drag.css('z-index', 1000).parents().on("mousemove", function(e) {
+                $('.draggable').offset({
+                    top:e.pageY + pos_y - drg_h,
+                    left:e.pageX + pos_x - drg_w
+                }).on("mouseup", function() {
+                    $(this).removeClass('draggable').css('z-index', z_idx);
+                });
+            });
+            e.preventDefault(); // disable selection
+        }).on("mouseup", function() {
+            if(opt.handle === "") {
+                $(this).removeClass('draggable');
+            } else {
+                $(this).removeClass('active-handle').parent().removeClass('draggable');
+            }
+        });
+
+    }
+})(jQuery);
+
+$('#mydiv14').drags();
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+
+</script>
+<style>
+#mydiv14 {
+  padding: 0px;
+		margin: 0px;
+		position: fixed;
+		right: 220px;
+		bottom:0px;
+		width: 200px;
+    height: 670px;
+    text-align: center;
+    z-index: 9999px;
+    font-size: 5px
+}
+
+#mydivheader14 {
+  border-radius: 15px;
+ padding: 10px;
+  cursor: move;
+  
+  background-color: #2196F3;
+  color: #fff;
+  
+}
+</style>
+ <!-- BUSCADOR 3 -->
+  <!-- Trigger/Open The Modal -->
+	<button id="myBtn14" class="button button14">elglogloking</button>
+<!-- The Modal -->
+		<div id="myModal14" class="modal14">
+<!-- Modal content -->
+		<div class="modal14-content">
+		<div class="modal14-header">
+			<span class="close14">X</span>
+	</div>
+  <div class="modal14-body">
+	<script>
+  // Get the modal
+var modal14 = document.getElementById('myModal14');
+// Get the modal
+var modal14 = document.getElementById('myModal14');
+// Get the button that opens the modal
+var btn14 = document.getElementById("myBtn14");
+// Get the <span> element that closes the modal
+var span14 = document.getElementsByClassName("close14")[0];
+// When the user clicks on the button, open the modal
+btn14.onclick = function() {
+    modal14.style.display = "block";
+	modal14.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span14.onclick = function() {
+    modal14.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal14) {
+        modal14.style.display = "none";
+    }
+}
+</script>
+<body>
+ <style>
+      #twitch-embed {
+        
+        margin-right: 20px;
+        top:300px;
+       border: 0px solid #888;
+        width: 180px;
+        height: 240px;
+        
+      }
+    </style>
+
+    <div id="twitch14-embed">
+<!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+ <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+   <script type="text/javascript">
+      new Twitch.Embed("twitch14-embed", {
+      
+        width: 180,
+        height: 240,
+        channel: "elglogloking",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["jsfiddle.net", "hdriplatino.com"]
+      });
+</script>	
+    </div>
+    </body>
+<!-- trovo 3 -->
+<body>
+<div>
+</div>
+</body>
+</div>
+</div>
+</div>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+t /* The Modal (background) */
+.modal14 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1px; /* Sit on top */
+    left: 0px;
+    top: 300px;
+     margin: 0px; /* 15% from the top and centered */
+    border: 0px solid #888;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+/* Modal Content/Box contenido de tiwtch  */
+.modal14-content {
+	position: fixed;
+    background-color: #fefefe;
+    margin: 0px; /* 15% from the top and centered */
+    padding: 0;
+   border: 0px solid #888;
+	border-radius: 15px;
+    width: 200px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatebottom;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close14 {
+    color: #666;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close14:hover, .close14:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal14-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal14-body {padding: 2px 16px;}
+.button14 {
+top: 300px;
+width: 100px;
+font-size: 10px;
+margin: 0px; /* 15% from the top and centered */
+ }
+</style>
+  </div>
+<!-- BUSCADOR 3 -->
+         
     
       
       
@@ -351,7 +630,7 @@ $('#mydiv13').drags();
 #mydivheader13 {
   border-radius: 15px;
  padding: 10px;
-  cursor: grab;
+  cursor: move;
   
   background-color: #2196F3;
   color: #fff;
@@ -632,7 +911,7 @@ $('#mydiv12').drags();
 #mydivheader12 {
   border-radius: 15px;
  padding: 10px;
-  cursor: grab;
+  cursor: move;
   
   background-color: #2196F3;
   color: #fff;
@@ -913,7 +1192,7 @@ $('#mydiv5').drags();
 #mydivheader5 {
   border-radius: 15px;
  padding: 10px;
-  cursor: grab;
+  cursor: move;
   
   background-color: #2196F3;
   color: #fff;
