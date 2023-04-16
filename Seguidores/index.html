@@ -1,12 +1,12 @@
 <body>
 
-<a href="#js_zoom_and_pan">.fasdd</a>
+<a href="#modalDialog1">Reales-Twitch</a>
 
-<div id="js_zoom_and_pan" class="modalDialog1">
+<div id="modalDialog1" class="js_zoom_and_pan">
 <div> <a href="#close" title="Close" class="close">X</a>
 <style type="text/css">
 
-.modalDialog1 {
+#modalDialog1 {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
      padding: 0px;
@@ -16,9 +16,9 @@
 		right: 10px;
 		bottom:0px;
 		width: 260px;
-    height: 480px;
+    height: 440px;
     
-    z-index: 99999px;
+    z-index: 9999px;
     font-size: 5px;
     background: rgba(0, 0, 0, 0.8);
     
@@ -28,15 +28,15 @@
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
-.modalDialog1:target {
+#modalDialog1:target {
     opacity:1;
     pointer-events: auto;
 }
-.modalDialog1 > div {
-    width: 180px;
+#modalDialog1 > div {
+    width: 200px;
     
     position: fixed;
-    margin: 3% auto;
+    
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #fff;
