@@ -113,7 +113,7 @@ header{
 
 .content-all label{
 	position: fixed;
-	margin-left: 20px;
+	margin-left: 0px;
 	width: 100%;
 	max-width: 100px;
 	top: 10px;
@@ -131,7 +131,7 @@ header{
 
 	.content-all label{
 		position: fixed;
-		margin-left: 20px;
+		margin-left: 0px;
 		width: 100%;
 		max-width: 100px;
 		top: 15px;
